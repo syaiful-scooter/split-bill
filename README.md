@@ -1,5 +1,22 @@
 # Dokumentasi Project Split Bill
 
+## Menjawab pertanyaan
+
+```java
+"What was the hardest design decision you made while building this, and what trade-off did you accept?"
+```
+
+ketika membangun project ini,
+keputusan desain tersulit adalah bagaimana menangani logika split bill yang fleksibel
+namun tetap sederhana di waktu yang terbatas.
+Saya memutuskan untuk menggunakan strategi split bill berbasis metode (`bagirata`, `percentage`, `exact`) yang dapat diperluas di masa depan.
+Trade-off yang diterima adalah kompleksitas tambahan dalam service layer untuk menghitung pembagian tagihan, validasi logika,
+dan perhitungan biaya layanan.
+Saya memilih fleksibilitas dan skalabilitas di atas kesederhanaan implementasi awal,
+sehingga memungkinkan penambahan strategi split bill baru tanpa mengubah struktur database atau model utama.
+masih banyak yang perlu saya perbaiki, seperti validasi dan me-refaktor kode agar lebih modular.
+
+
 ## 1. Gambaran Umum
 
 Split Bill adalah project API backend berbasis Spring Boot untuk mengelola pembagian tagihan bersama antar pengguna. Aplikasi ini memungkinkan pengguna membuat transaksi, menentukan cara pembagian tagihan, menghitung biaya layanan, memantau saldo, dan menandai status pembayaran.
@@ -344,19 +361,3 @@ Split Bill adalah aplikasi backend yang dirancang untuk mengelola pembayaran ber
 
 
 
-## 12. Menjawab pertanyaan
-
-
-```java
-"What was the hardest design decision you made while building this, and what trade-off did you accept?"
-```
-
-ketika membangun project ini, 
-keputusan desain tersulit adalah bagaimana menangani logika split bill yang fleksibel
-namun tetap sederhana di waktu yang terbatas. 
-Saya memutuskan untuk menggunakan strategi split bill berbasis metode (`bagirata`, `percentage`, `exact`) yang dapat diperluas di masa depan. 
-Trade-off yang diterima adalah kompleksitas tambahan dalam service layer untuk menghitung pembagian tagihan, validasi logika, 
-dan perhitungan biaya layanan. 
-Saya memilih fleksibilitas dan skalabilitas di atas kesederhanaan implementasi awal, 
-sehingga memungkinkan penambahan strategi split bill baru tanpa mengubah struktur database atau model utama.
-masih banyak yang perlu saya perbaiki, seperti validasi dan me-refaktor kode agar lebih modular.
