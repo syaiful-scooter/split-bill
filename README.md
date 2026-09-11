@@ -341,3 +341,22 @@ Beberapa peningkatan yang bisa dilakukan ke depannya:
 ## 11. Kesimpulan
 
 Split Bill adalah aplikasi backend yang dirancang untuk mengelola pembayaran bersama antar pengguna. Project ini menjadi fondasi yang praktis untuk menangani pembuatan transaksi, logika split, perhitungan biaya layanan, serta tracking settlement pembayaran dengan Java dan Spring Boot.
+
+
+
+## 12. Menjawab pertanyaan
+
+
+```java
+"What was the hardest design decision you made while building this, and what trade-off did you accept?"
+```
+
+ketika membangun project ini, 
+keputusan desain tersulit adalah bagaimana menangani logika split bill yang fleksibel
+namun tetap sederhana di waktu yang terbatas. 
+Saya memutuskan untuk menggunakan strategi split bill berbasis metode (`bagirata`, `percentage`, `exact`) yang dapat diperluas di masa depan. 
+Trade-off yang diterima adalah kompleksitas tambahan dalam service layer untuk menghitung pembagian tagihan, validasi logika, 
+dan perhitungan biaya layanan. 
+Saya memilih fleksibilitas dan skalabilitas di atas kesederhanaan implementasi awal, 
+sehingga memungkinkan penambahan strategi split bill baru tanpa mengubah struktur database atau model utama.
+masih banyak yang perlu saya perbaiki, seperti validasi dan me-refaktor kode agar lebih modular.
